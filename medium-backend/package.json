@@ -1,0 +1,24 @@
+{
+  "name": "medium-backend",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "start": "node ./dist/index.js",
+    "prisma:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "@prisma/extension-accelerate": "^1.1.0",
+    "@priyanshu-hover/common-mod": "^1.1.0",
+    "@priyanshu-hover/medium-common": "^1.0.0",
+    "@types/bcrypt": "^5.0.2",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "hono": "^4.5.11"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "prisma": "^5.19.1",
+    "wrangler": "^3.57.2"
+  }
+}
